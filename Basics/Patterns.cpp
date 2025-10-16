@@ -197,6 +197,99 @@ void pattern12(int n)
     }
 }
 
+void pattern13(int n)
+{
+    int count = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << count << " ";
+            count++;
+        }
+        cout << endl;
+    }
+}
+
+void pattern14(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        char c = 'A';
+        for (int j = 1; j <= i; j++)
+        {
+            cout << c;
+            c++;
+        }
+        cout << endl;
+    }
+}
+
+void pattern15(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        char c = 'A';
+        for (int j = 1; j <= n - i + 1; j++)
+        {
+            cout << c;
+            c++;
+        }
+        cout << endl;
+    }
+}
+
+void pattern16(int n)
+{
+    char c = 'A';
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            cout << c;
+        }
+        c++;
+        cout << endl;
+    }
+}
+
+void pattern17(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            cout << " ";
+        }
+
+        char c = 'A';
+        int breakPoint = (2 * i + 1) / 2;
+        for (int j = 1; j <= (2 * i + 1); j++)
+        {
+            cout << c;
+            if (j <= breakPoint)
+                c++;
+            else
+                c--;
+        }
+        cout << endl;
+    }
+}
+
+void pattern18(int n)
+{
+    char c = 'E';
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << c;
+            c -= i;
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     int n;
@@ -213,5 +306,11 @@ int main()
     // pattern9(n);
     // pattern10(n);
     // pattern11(n);
-    pattern12(n);
+    // pattern12(n);
+    // pattern13(n);
+    // pattern14(n);
+    // pattern15(n);
+    // pattern16(n);
+    // pattern17(n);
+    pattern18(n); // not completed!
 }
